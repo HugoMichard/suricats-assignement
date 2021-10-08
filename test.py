@@ -1,5 +1,5 @@
 import unittest
-from main import Rover
+from rover import Rover
 
 
 class Tests(unittest.TestCase):
@@ -28,6 +28,11 @@ class Tests(unittest.TestCase):
         r = Rover()
         r.run("LBLFRRLBRLFBRL\nLBBBFRLBLLLFR\nLBRLBLLLL")
         self.assertEqual(r.get_communication(), "2 -1 W\n1 2 N\n3 2 W")
+
+    def test_bad_instructions(self):
+        r = Rover()
+        with self.assertRaises(ValueError):
+            r.run("aezrcuazerc")
 
     def test_assignement_part_1(self):
         r = Rover()
