@@ -19,7 +19,11 @@ pip install -r requirements.txt
 
 ### Architecture
 
-Main.py file contains the solution to the test and the test.py file contains the tests 
+Main.py file contains a script to run the rover. It can be started with :
+```
+python3 main.py
+```
+Rover.py contains the implementation of the rover that solves the test tasks and the test.py file contains the tests 
 implemented to check the code robustness.
 
 ### Tests
